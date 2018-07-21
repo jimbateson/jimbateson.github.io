@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,8 +88,18 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
 
@@ -29,16 +107,20 @@ body {
 	line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
@@ -61,42 +143,20 @@ html {
 .is-he-here {
 	align-content: center;
 	display: grid;
-	font-size: 11em;
+	font-size: 5em;
 	height: 80vh;
 	grid-gap: 20px;
-	grid-template-columns: repeat(2, auto 1fr);
-	grid-template-rows: repeat(3, 125px);
+	grid-template-rows: repeat(4, 55px);
 	padding: 0 20px;
 	text-shadow: 1px 1px 1px #909090;
 }
 
-/* Is */
-.is-he-here span:nth-child(1) {
-	/* grid-column: 1 / 5; */
-	grid-row: 1;
-	/* For some reason the 'is' doesn't line up with the word below :( */
-	margin-left: -10px;
-}
-
-/* Veggie */
-.is-he-here span:nth-child(2) {
-	/* grid-column: 1 / 5; */
-	grid-row: 2;
-}
-
-/* Man */
-.is-he-here span:nth-child(3) {
-	grid-column: 2;
-	grid-row: 2;
-}
-
-/* Here? */
-.is-he-here span:nth-child(4) {
-	grid-column: 2;
-	grid-row: 3;
+.is-he-here span {
+	display: block;
 }
 
 /* Is he here? plus the updated day */
+
 .messages {
 	text-align: center;
 }
@@ -110,10 +170,70 @@ html {
 }
 
 /* Carrot, onion, tomato, lettuce? */
+
 blockquote {
+	display: none;
 	font-size: 2em;
 	opacity: .15;
 	position: absolute;
 	right: 5px;
 	top: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.is-he-here {
+		font-size: 6em;
+		grid-template-columns: repeat(2, auto 1fr);
+	}
+
+	/* Is */
+
+	.is-he-here span:nth-child(1) {
+		/* grid-column: 1 / 5; */
+		grid-row: 1;
+		margin-left: -5px;
+	}
+
+	/* Veggie */
+
+	.is-he-here span:nth-child(2) {
+		/* grid-column: 1 / 5; */
+		grid-row: 2;
+	}
+
+	/* Man */
+
+	.is-he-here span:nth-child(3) {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	/* Here? */
+
+	.is-he-here span:nth-child(4) {
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	blockquote {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.is-he-here {
+		font-size: 8em;
+		grid-template-rows: repeat(3, 125px);
+	}
+
+	.is-he-here span:nth-child(1) {
+		/* For some reason the 'is' doesn't line up with the word below :( */
+		margin-left: -10px;
+	}
+}
+
+@media screen and (min-width: 1220px) {
+	.is-he-here {
+		font-size: 11em;
+	}
 }
