@@ -135,6 +135,7 @@ table {
 html {
 	background: linear-gradient(to top, #0ba360, #3cba92);
 	color: #fff;
+	cursor: url(../images/clippers.png), auto;
 	font-family: 'Paytone One', sans-serif;
 	min-height: 100vh;
 	text-transform: uppercase;
