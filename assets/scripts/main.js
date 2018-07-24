@@ -20,23 +20,19 @@ fetch('./config.json')
 
 	// If it's Wednesday or Saturday and he's here, show yes
 
-	if((dayOfWeek === 4 || dayOfWeek === 7) && isHeHere)
+	if((dayOfWeek === 4 || dayOfWeek === 7) && isHeHere || isHeHereSpecial)
 	{
 
 		messageElement.innerHTML = 'He&rsquo;s here!';
+		document.body.classList.add('he-is-here');
 
-		// If it's Wednesday or Saturday and he's not here, show no :(
+	// If it's Wednesday or Saturday and he's not here, show no :(
 	} else if((dayOfWeek === 4 || dayOfWeek === 7) && !isHeHere)
 	{
 
 		messageElement.innerHTML= 'He&rsquo;s not here :(';
 
-		// For all other days it's not market day so he won't be here
-		// TODO: What about random special market days?
-	} else if(isHeHereSpecial) {
-
-		messageElement.innerHTML = 'He&rsquo;s here!';
-
+	// For all other days it's not market day so he won't be here
 	} else {
 
 		messageElement.innerHTML = 'It&rsquo;s not market day, jefferson';

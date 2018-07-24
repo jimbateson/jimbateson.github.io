@@ -181,6 +181,23 @@ blockquote {
 	top: 0;
 }
 
+blockquote:before {
+	content: '\201D';
+	display: block;
+	font-size: 3em;
+	right: -10px;
+	position: absolute;
+	top: -30px;
+}
+
+.he-is-here blockquote {
+	opacity: .85;
+}
+
+.he-is-here blockquote:before {
+	opacity: .25;
+}
+
 @media screen and (min-width: 768px) {
 	.is-he-here {
 		font-size: 6em;
