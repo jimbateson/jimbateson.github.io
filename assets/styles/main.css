@@ -176,7 +176,7 @@ blockquote {
 	display: none;
 	font-size: 2em;
 	opacity: .15;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	position: absolute;
 	right: 5px;
 	top: 0;
