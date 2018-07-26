@@ -256,3 +256,11 @@ blockquote:before {
 		font-size: 11em;
 	}
 }
+
+@media screen and (min-width: 1920px) {
+	.is-he-here {
+		font-size: 14em;
+		grid-gap: 65px 20px;
+		padding: 0 40px;
+	}
+}
