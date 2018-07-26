@@ -263,4 +263,8 @@ blockquote:before {
 		grid-gap: 65px 20px;
 		padding: 0 40px;
 	}
+
+	.messages {
+		margin-top: 40px;
+	}
 }
