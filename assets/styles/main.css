@@ -133,12 +133,16 @@ table {
 /* Page custom styles */
 
 html {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
 	background: linear-gradient(to top, #0ba360, #3cba92);
 	color: #fff;
 	cursor: url(../images/clippers.png), auto;
 	font-family: 'Paytone One', sans-serif;
 	min-height: 100vh;
 	text-transform: uppercase;
+	user-select: none;
 }
 
 .is-he-here {
@@ -168,6 +172,10 @@ html {
 
 .messages p {
 	margin-top: 20px;
+}
+
+.forecast-message {
+	display: none;
 }
 
 /* Carrot, onion, tomato, lettuce? */
@@ -236,6 +244,19 @@ blockquote:before {
 
 	blockquote {
 		display: block;
+	}
+
+	.messages {
+		display: flex;
+		justify-content: center;
+	}
+
+	.messages * + * {
+		margin-left: 40px;
+	}
+
+	.forecast-message {
+		display: flex;
 	}
 }
 

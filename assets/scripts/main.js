@@ -52,3 +52,16 @@ fetch('./config.json')
 .catch(err => {
 	console.log(err);
 });
+
+document.body.addEventListener('mousedown', () =>
+{
+
+	document.getElementsByTagName('html')[0].style.cursor = 'url(assets/images/clippers-closed.png), auto';
+
+}, false);
+
+document.body.addEventListener('mouseup', () => {
+
+	document.getElementsByTagName('html')[0].style.cursor = 'url(assets/images/clippers.png), auto';
+
+}, false);
