@@ -251,12 +251,9 @@ blockquote:before {
 		justify-content: center;
 	}
 
-	.messages * + * {
-		margin-left: 40px;
-	}
-
 	.forecast-message {
 		display: flex;
+		margin-left: 40px;
 	}
 }
 
