@@ -159,6 +159,7 @@ video {
 
 .ding-kerching {
 	bottom: 5px;
+	display: none;
 	left: 5px;
 	opacity: .5;
 	position: absolute;
@@ -278,6 +279,10 @@ blockquote:before {
 	.forecast-message {
 		display: flex;
 		margin-left: 40px;
+	}
+
+	.ding-kerching {
+		display: block;
 	}
 }
 
