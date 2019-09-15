@@ -138,7 +138,7 @@ html {
 	-webkit-user-select: none;
 	background: linear-gradient(to top, #0ba360, #3cba92);
 	color: #fff;
-	cursor: url(../images/clippers.png), auto;
+	cursor: url(../images/clippers.png) 0 64, auto;
 	font-family: 'Paytone One', sans-serif;
 	min-height: 100vh;
 	text-transform: uppercase;
@@ -184,6 +184,7 @@ video {
 .is-he-here span {
 	display: block;
 }
+
 
 /* Is he here? plus the updated day */
 
@@ -232,6 +233,17 @@ blockquote:before {
 	opacity: .25;
 }
 
+.wholemeal-neon {
+	/* See bototm of file for animation keyframes */
+	animation: neon 1.5s ease-in-out infinite alternate;
+	font-family: Monoton;
+	font-size: 28px;
+	letter-spacing: 1px;
+	line-height: 1.4;
+	margin-left: 10px;
+	margin-top: 40px;
+}
+
 @media screen and (min-width: 768px) {
 	.is-he-here {
 		font-size: 6em;
@@ -267,6 +279,13 @@ blockquote:before {
 		grid-row: 3;
 	}
 
+	.is-he-here span:nth-child(5) {
+		align-self: center;
+		display: flex;
+		grid-column: 2;
+		grid-row: 1;
+	}
+
 	blockquote {
 		display: block;
 	}
@@ -284,6 +303,10 @@ blockquote:before {
 	.ding-kerching {
 		display: block;
 	}
+
+	.wholemeal-neon {
+		margin-top: 0;
+	}
 }
 
 @media screen and (min-width: 960px) {
@@ -296,11 +319,20 @@ blockquote:before {
 		/* For some reason the 'is' doesn't line up with the word below :( */
 		margin-left: -10px;
 	}
+
+	.wholemeal-neon {
+		margin-top: 40px;
+	}
 }
 
 @media screen and (min-width: 1220px) {
 	.is-he-here {
 		font-size: 11em;
+	}
+
+	.wholemeal-neon {
+		font-size: 37px;
+		margin-top: 70px;
 	}
 }
 
@@ -314,4 +346,13 @@ blockquote:before {
 	.messages {
 		margin-top: 40px;
 	}
+}
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3cba92, 0 0 70px #3cba92, 0 0 80px #3cba92, 0 0 100px #3cba92, 0 0 150px #3cba92;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #3cba92, 0 0 35px #3cba92, 0 0 40px #3cba92, 0 0 50px #3cba92, 0 0 75px #3cba92;
+  }
 }
