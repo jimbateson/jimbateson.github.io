@@ -86,4 +86,4 @@ function preloadImages(array) {
 	}
 }
 
-preloadImages(["assets/images/clippers.png"]);
+preloadImages(["assets/images/clippers.png", "assets/images/clippers-closed.png"]);
